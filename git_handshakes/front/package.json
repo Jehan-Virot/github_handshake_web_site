@@ -1,0 +1,22 @@
+{
+  "name": "git_handshake_front_vue_vite",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.vue"
+  },
+  "dependencies": {
+    "vue": "^3.4.x",
+    "cytoscape": "^3.33.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.2",
+    "vite": "^8.0.2",
+    "eslint": "^9.x",
+    "eslint-plugin-vue": "^10.7.0"
+  }
+}

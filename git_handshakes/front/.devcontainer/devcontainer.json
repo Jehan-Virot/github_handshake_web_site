@@ -1,0 +1,9 @@
+{
+    "name": "Git_handshake_front_end",
+    "build": {
+        "dockerfile": "DOCKERFILE",
+        "context": ".."
+    },
+    "forwardPorts": [5173],
+    "postCreateCommand": "pnpm install"
+}
