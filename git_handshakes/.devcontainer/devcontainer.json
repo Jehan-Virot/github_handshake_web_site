@@ -1,0 +1,9 @@
+{
+  "name": "git_handshake_full_stack",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "remoteUser": "jehan",
+  "forwardPorts": [8000, 3000, 5173]
+}

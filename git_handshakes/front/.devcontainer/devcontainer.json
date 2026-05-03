@@ -1,7 +1,7 @@
 {
     "name": "Git_handshake_front_end",
     "build": {
-        "dockerfile": "DOCKERFILE",
+        "dockerfile": "../Dockerfile",
         "context": ".."
     },
     "forwardPorts": [5173],
