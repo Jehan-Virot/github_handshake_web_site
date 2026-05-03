@@ -1,6 +1,6 @@
-use reqwest::Client
+use reqwest::Client;
 
-#[derive(clone)]
+#[derive(Clone)]
 pub struct AppState{
-    client = Client
+    pub client : Client,
 }

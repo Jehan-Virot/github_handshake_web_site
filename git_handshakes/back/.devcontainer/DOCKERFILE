@@ -1,16 +1,19 @@
 FROM rust:1.94
 
-# Build args pour UID/GID
 ARG USER_UID=1000
 ARG USER_GID=1000
 
-# Créer user jehan avec UID/GID identique à l'hôte
 RUN groupadd -g $USER_GID jehan \
     && useradd -m -u $USER_UID -g $USER_GID -s /bin/bash jehan
 
+ENV CARGO_HOME=/app/.cargo
+ENV RUSTUP_HOME=/app/.rustup
+
+RUN mkdir -p /app/.cargo /app/.rustup
+
+RUN rustup default stable
 RUN cargo install cargo-edit
 
-#crée l'environnement
 WORKDIR /app
 
 COPY Cargo.toml Cargo.lock* ./
@@ -18,17 +21,12 @@ COPY src ./src
 
 RUN cargo fetch
 
-# Switch to non-root user
 RUN chown -R jehan:jehan /app
 
-# Copy the rest of your source code
 COPY --chown=jehan:jehan . .
 
-# Optional: run cargo build to compile app
 RUN cargo build
 
 USER jehan
 
-# Default command
 CMD ["cargo", "run"]
-

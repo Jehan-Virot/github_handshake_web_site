@@ -1,0 +1,4 @@
+/git_handshakes/back/target
+/.pnpm-store
+/git_handshakes/front/.pnp-store/v10
+/git_handshakes/front/node_modules

@@ -1,0 +1,14 @@
+services:
+  back:
+    build: ./back
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./back:/app
+  
+  front:
+    build: ./front
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./front:/app
